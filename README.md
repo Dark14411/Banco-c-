@@ -1,170 +1,337 @@
-# 🏦 Sistema de Gestión de Cola Bancaria
+# 🏗️ PROYECTO 1: COLA BÁSICA# 🏦 Sistema de Gestión de Cola Bancaria
 
-Sistema web interactivo para gestionar colas de atención en un banco, desarrollado con **ASP.NET Core 9.0** y **Razor Pages**.
 
-## 🎯 Características
 
-### ✨ Funcionalidades CRUD Completas
+Implementación web interactiva de los principales métodos de una estructura de datos **Cola (Queue)**, desarrollada con **ASP.NET Core 9.0** y **Razor Pages**.Sistema web interactivo para gestionar colas de atención en un banco, desarrollado con **ASP.NET Core 9.0** y **Razor Pages**.
+
+
+
+## 🎯 Objetivo## 🎯 Características
+
+
+
+Demostrar el funcionamiento de los métodos fundamentales de una estructura de datos **Cola** mediante una interfaz web visual e interactiva.### ✨ Funcionalidades CRUD Completas
+
 - **Crear** tickets de atención con información del cliente
-- **Leer** y visualizar tickets organizados por estado
+
+## ✨ Métodos Implementados- **Leer** y visualizar tickets organizados por estado
+
 - **Actualizar** información de tickets en espera
-- **Eliminar** tickets individuales o limpiar completados
 
-### 🚀 Sistema de Prioridades
+### 📥 Métodos de Inserción y Eliminación- **Eliminar** tickets individuales o limpiar completados
+
+- **Encolar (Enqueue)**: Agrega un elemento al final de la cola
+
+- **Desencolar (Dequeue)**: Elimina y retorna el primer elemento de la cola (FIFO)### 🚀 Sistema de Prioridades
+
 - **Normal** (⚪): Atención en orden FIFO estándar
-- **Preferente** (⭐): Botón de atención directa
-- **Urgente** (🚨): Botón de atención inmediata
 
-### 📊 Panel de Control
-- Estadísticas en tiempo real
-- Dashboard con contadores dinámicos
+### 🔍 Métodos de Consulta- **Preferente** (⭐): Botón de atención directa
+
+- **Peek (Frente)**: Consulta el primer elemento sin eliminarlo- **Urgente** (🚨): Botón de atención inmediata
+
+- **Peek Final**: Consulta el último elemento sin eliminarlo
+
+- **¿Está Vacía?**: Verifica si la cola no tiene elementos### 📊 Panel de Control
+
+- **¿Está Llena?**: Verifica si la cola alcanzó su capacidad máxima (10 elementos)- Estadísticas en tiempo real
+
+- **Tamaño**: Retorna el número actual de elementos en la cola- Dashboard con contadores dinámicos
+
 - Auto-actualización cada 5 segundos
-- Notificaciones de acciones
 
-### 🎨 Interfaz de Usuario
+### 🧹 Métodos de Gestión- Notificaciones de acciones
+
+- **Mostrar**: Muestra todos los elementos actuales de la cola
+
+- **Limpiar**: Elimina todos los elementos de la cola### 🎨 Interfaz de Usuario
+
 - Diseño moderno con gradientes
-- Totalmente responsive
+
+## 🔄 Principio FIFO- Totalmente responsive
+
 - Animaciones suaves
-- Sistema de pestañas (En Espera, Atendiendo, Completados, Todos)
 
-## 🛠️ Tecnologías Utilizadas
+La cola sigue el principio **FIFO (First In, First Out)**:- Sistema de pestañas (En Espera, Atendiendo, Completados, Todos)
 
-- **Backend**: ASP.NET Core 9.0
-- **Frontend**: Razor Pages, HTML5, CSS3, JavaScript (ES6+)
+- El **primer** elemento que entra es el **primer** elemento que sale
+
+- Ejemplo:## 🛠️ Tecnologías Utilizadas
+
+  1. Encolar: 5, 10, 15 → Cola: [5, 10, 15]
+
+  2. Desencolar → Saca el **5** → Cola: [10, 15]- **Backend**: ASP.NET Core 9.0
+
+  3. Desencolar → Saca el **10** → Cola: [15]- **Frontend**: Razor Pages, HTML5, CSS3, JavaScript (ES6+)
+
 - **Arquitectura**: MVC Pattern
-- **API**: RESTful API
+
+## 🛠️ Tecnologías Utilizadas- **API**: RESTful API
+
 - **Gestión de Estado**: Singleton Service Pattern
 
-## 📋 Tipos de Operaciones
+- **Backend**: ASP.NET Core 9.0
 
-1. Depósito
+- **Frontend**: Razor Pages, HTML5, CSS3## 📋 Tipos de Operaciones
+
+- **Estructura de Datos**: Queue<int> (Cola de enteros)
+
+- **Capacidad Máxima**: 10 elementos1. Depósito
+
 2. Retiro
-3. Consulta
+
+## 🚀 Instalación y Ejecución3. Consulta
+
 4. Apertura de Cuenta
-5. Pago de Servicios
-6. Solicitud de Crédito
-7. Transferencia
+
+### Requisitos Previos5. Pago de Servicios
+
+- .NET 9.0 SDK6. Solicitud de Crédito
+
+- Navegador web moderno7. Transferencia
+
 8. **Robo** (Atención prioritaria)
-
-## 🚀 Instalación y Ejecución
-
-### Requisitos Previos
-- .NET 9.0 SDK
-- Navegador web moderno
 
 ### Pasos de Instalación
 
+## 🚀 Instalación y Ejecución
+
 1. **Clonar el repositorio**
-```bash
-git clone https://github.com/Dark14411/Banco-c-.git
-cd Banco-c-
+
+```bash### Requisitos Previos
+
+git clone https://github.com/Dark14411/Banco-c-.git- .NET 9.0 SDK
+
+cd Banco-c-- Navegador web moderno
+
 ```
+
+### Pasos de Instalación
 
 2. **Restaurar dependencias**
+
+```bash1. **Clonar el repositorio**
+
+dotnet restore```bash
+
+```git clone https://github.com/Dark14411/Banco-c-.git
+
+cd Banco-c-
+
+3. **Compilar el proyecto**```
+
 ```bash
+
+dotnet build2. **Restaurar dependencias**
+
+``````bash
+
 dotnet restore
-```
 
-3. **Compilar el proyecto**
+4. **Ejecutar la aplicación**```
+
 ```bash
+
+dotnet run3. **Compilar el proyecto**
+
+``````bash
+
 dotnet build
+
+5. **Abrir en el navegador**```
+
 ```
 
-4. **Ejecutar la aplicación**
-```bash
+http://localhost:51324. **Ejecutar la aplicación**
+
+``````bash
+
 dotnet run
+
+## 📁 Estructura del Proyecto```
+
+
+
+```5. **Abrir en el navegador**
+
+BancoWebApp/```
+
+├── Pages/http://localhost:5132
+
+│   ├── Index.cshtml           # Interfaz visual de la cola```
+
+│   └── Index.cshtml.cs        # Lógica de los métodos de cola
+
+└── Program.cs                 # Configuración de la aplicación## 📁 Estructura del Proyecto
+
 ```
 
-5. **Abrir en el navegador**
-```
-http://localhost:5132
 ```
 
-## 📁 Estructura del Proyecto
+## 💡 Uso de la AplicaciónBancoWebApp/
 
-```
-BancoWebApp/
 ├── Controllers/
-│   └── BancoController.cs       # API REST endpoints
-├── Models/
-│   ├── Ticket.cs                # Modelo de datos del ticket
-│   └── Estadisticas.cs          # Modelo de estadísticas
+
+### 1. Encolar Elementos│   └── BancoController.cs       # API REST endpoints
+
+- Ingresa un número en el campo de texto├── Models/
+
+- Click en "➕ Encolar (Enqueue)"│   ├── Ticket.cs                # Modelo de datos del ticket
+
+- El elemento se agrega al **final** de la cola│   └── Estadisticas.cs          # Modelo de estadísticas
+
 ├── Services/
-│   └── BancoQueueService.cs     # Lógica de gestión de cola
-├── Pages/
-│   └── Index.cshtml             # Interfaz de usuario
-└── Program.cs                   # Configuración de la aplicación
+
+### 2. Desencolar Elementos│   └── BancoQueueService.cs     # Lógica de gestión de cola
+
+- Click en "➖ Desencolar (Dequeue)"├── Pages/
+
+- Se elimina y muestra el **primer** elemento de la cola│   └── Index.cshtml             # Interfaz de usuario
+
+- **Nota**: No necesitas ingresar ningún número, siempre saca el primero└── Program.cs                   # Configuración de la aplicación
+
 ```
 
-## 🔌 API Endpoints
+### 3. Consultar la Cola
 
-### Tickets
+- **Peek (Frente)**: Ver el primer elemento sin eliminarlo## 🔌 API Endpoints
+
+- **Peek Final**: Ver el último elemento sin eliminarlo
+
+- **Mostrar**: Ver todos los elementos actuales en la cola### Tickets
+
 - `GET /api/banco/tickets` - Obtener todos los tickets
-- `GET /api/banco/tickets/{id}` - Obtener ticket por ID
-- `POST /api/banco/tickets` - Crear nuevo ticket
-- `PUT /api/banco/tickets/{id}` - Actualizar ticket
-- `DELETE /api/banco/tickets/{id}` - Eliminar ticket
 
-### Estados
-- `GET /api/banco/espera` - Tickets en espera
-- `GET /api/banco/atendiendo` - Tickets en atención
+### 4. Verificar Estado- `GET /api/banco/tickets/{id}` - Obtener ticket por ID
+
+- **¿Está Vacía?**: Verifica si la cola tiene 0 elementos- `POST /api/banco/tickets` - Crear nuevo ticket
+
+- **¿Está Llena?**: Verifica si la cola tiene 10 elementos (capacidad máxima)- `PUT /api/banco/tickets/{id}` - Actualizar ticket
+
+- **Tamaño**: Muestra cuántos elementos hay actualmente- `DELETE /api/banco/tickets/{id}` - Eliminar ticket
+
+
+
+### 5. Limpiar Cola### Estados
+
+- Click en "🧹 Limpiar"- `GET /api/banco/espera` - Tickets en espera
+
+- Elimina todos los elementos de la cola- `GET /api/banco/atendiendo` - Tickets en atención
+
 - `GET /api/banco/completados` - Tickets completados
 
+## 🎨 Características Visuales
+
 ### Acciones
-- `POST /api/banco/atender` - Atender siguiente en cola
-- `POST /api/banco/atender/{id}` - Atender ticket específico (prioritario)
-- `POST /api/banco/completar/{id}` - Completar ticket
-- `DELETE /api/banco/limpiar-completados` - Limpiar completados
 
-### Utilidades
-- `GET /api/banco/estadisticas` - Obtener estadísticas
-- `POST /api/banco/datos-prueba` - Cargar datos de prueba
+- **Representación visual**: Los elementos se muestran como cajas con flechas- `POST /api/banco/atender` - Atender siguiente en cola
 
-## 💡 Uso
+- **Panel de estado**: Muestra información en tiempo real- `POST /api/banco/atender/{id}` - Atender ticket específico (prioritario)
 
-### Crear un Ticket
-1. Ingresa el nombre del cliente
+  - Tamaño actual- `POST /api/banco/completar/{id}` - Completar ticket
+
+  - Estado (Vacía / Activa / Llena)- `DELETE /api/banco/limpiar-completados` - Limpiar completados
+
+  - Elementos actuales
+
+- **Mensajes de resultado**: Cada operación muestra un mensaje claro con emojis### Utilidades
+
+- **Diseño responsive**: Se adapta a diferentes tamaños de pantalla- `GET /api/banco/estadisticas` - Obtener estadísticas
+
+- **Gradiente moderno**: Interfaz atractiva con colores púrpura- `POST /api/banco/datos-prueba` - Cargar datos de prueba
+
+
+
+## 🎓 Conceptos de Estructuras de Datos## 💡 Uso
+
+
+
+### Cola (Queue)### Crear un Ticket
+
+Una **cola** es una estructura de datos lineal que sigue el principio **FIFO**:1. Ingresa el nombre del cliente
+
 2. Selecciona el tipo de operación
-3. Asigna la prioridad
-4. Click en "Generar Ticket"
 
-### Atender Clientes
-- **Orden normal**: Click en "▶️ Atender Siguiente"
+**Características**:3. Asigna la prioridad
+
+- Los elementos se insertan por un extremo (final)4. Click en "Generar Ticket"
+
+- Los elementos se eliminan por el otro extremo (frente)
+
+- No se puede acceder a elementos intermedios directamente### Atender Clientes
+
+- Capacidad limitada (10 elementos en este proyecto)- **Orden normal**: Click en "▶️ Atender Siguiente"
+
 - **Atención prioritaria**: Click en "▶️ Atender" (solo en tickets Preferentes/Urgentes)
 
-### Gestionar Tickets
-- **Editar**: Click en "✏️ Editar" (solo en espera)
-- **Eliminar**: Click en "🗑️ Eliminar" (solo en espera)
-- **Completar**: Click en "✅ Completar" (solo en atención)
+**Aplicaciones reales**:
 
-## 🎓 Conceptos de Estructuras de Datos
+- Colas de impresión### Gestionar Tickets
 
-Este proyecto implementa los siguientes conceptos:
+- Gestión de procesos en sistemas operativos- **Editar**: Click en "✏️ Editar" (solo en espera)
 
-- **Cola (Queue)**: FIFO para gestión de tickets en espera
-- **Lista (List)**: Para tickets en atención y completados
-- **Diccionario (Dictionary)**: Para acceso rápido por ID
-- **Singleton Pattern**: Para mantener estado global
-- **Thread Safety**: Lock para operaciones concurrentes
+- Colas de atención en bancos, hospitales, etc.- **Eliminar**: Click en "🗑️ Eliminar" (solo en espera)
 
-## 🤝 Contribuciones
+- Buffer de datos en comunicaciones- **Completar**: Click en "✅ Completar" (solo en atención)
 
-Las contribuciones son bienvenidas. Por favor:
 
-1. Fork el proyecto
+
+## 🤝 Contribuciones## 🎓 Conceptos de Estructuras de Datos
+
+
+
+Las contribuciones son bienvenidas. Por favor:Este proyecto implementa los siguientes conceptos:
+
+
+
+1. Fork el proyecto- **Cola (Queue)**: FIFO para gestión de tickets en espera
+
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)- **Lista (List)**: Para tickets en atención y completados
+
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)- **Diccionario (Dictionary)**: Para acceso rápido por ID
+
+4. Push a la rama (`git push origin feature/AmazingFeature`)- **Singleton Pattern**: Para mantener estado global
+
+5. Abre un Pull Request- **Thread Safety**: Lock para operaciones concurrentes
+
+
+
+## 📝 Licencia## 🤝 Contribuciones
+
+
+
+Este proyecto es de código abierto y está disponible bajo la licencia MIT.Las contribuciones son bienvenidas. Por favor:
+
+
+
+## 👨‍💻 Autor1. Fork el proyecto
+
 2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
+
+**Dark14411**3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+
+- GitHub: [@Dark14411](https://github.com/Dark14411)4. Push a la rama (`git push origin feature/AmazingFeature`)
+
 5. Abre un Pull Request
+
+## 🙏 Agradecimientos
 
 ## 📝 Licencia
 
-Este proyecto es de código abierto y está disponible bajo la licencia MIT.
+- Proyecto educativo para demostrar el funcionamiento de estructuras de datos tipo Cola
+
+- Diseño UI moderno con gradientes y animacionesEste proyecto es de código abierto y está disponible bajo la licencia MIT.
+
+- Implementación basada en buenas prácticas de ASP.NET Core
 
 ## 👨‍💻 Autor
 
+---
+
 **Dark14411**
-- GitHub: [@Dark14411](https://github.com/Dark14411)
+
+⭐ Si te gusta este proyecto, dale una estrella en GitHub!- GitHub: [@Dark14411](https://github.com/Dark14411)
+
 
 ## 🙏 Agradecimientos
 
